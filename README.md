@@ -9,7 +9,7 @@ I'm a neuroscientist by training but have a passion for computer science as a ve
 - 👯 I’m looking to collaborate on DSP with medical and consumer grade devices to improve our open source understanding of how they work
 
 - 💬 Ask me about fMRI and Python - I find the most challenging data the most exciting, and what's more challenging 
-  than understanding the brain!
+  than understanding the brain!?
 
 #### LINKS
 [LinkedIn](https://www.linkedin.com/in/jamesdsexton/)    
