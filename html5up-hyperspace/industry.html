@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Industry Work</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  		<script>hljs.initHighlightingOnLoad();</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">JD Sexton</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="academic.html" class="active">Academic</a></li>
+						<li><a href="index.html#two">Skills</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Industry Work</h1>
+							<span class="image fit"><img src="images/eleusisteam_crop.jpg" alt="" data-position="center center"/></span>
+							<span class="image left">
+									<img src="images/IMG_5035.JPG" alt="james_eeg"/>
+								</span>
+							<p>At Eleusis, I work with the Health Solutions team providing research insight to answer
+							the most challenging questions surround care delivery with the unique class of drugs, psychedelics.
+							<br>
+								<br>
+
+							We work to solve the issues surrounding patient discharge, predicting outcomes for subsets of patients, and screening
+							for potential contraindications for these types of emerging therapies.
+							<br>
+								<br>
+
+							Additionally, I recruited a team and developed a data integration pipeline to generate insights data science
+								that would support business and research decision making. This involved integrating
+								HL7, CDISC OMD XML, and other data structures into relational databases.
+							<br>
+								<br>
+							I developed proficiencies in PySpark, building schemas for structured data bases (json, YAML, pandera),
+							and reporting to non-technical audiences using dashboards and reporting tools (matplotlib, plotly, Grafana).
+							This was a unique opportunity to work with 3rd-party consultants to evaluate all the available
+							tools for building these types of data platforms.
+							<br>
+							<br>
+							I helped pioneer the use of Pandera to validate data that is passed through this pipeline. Anyone working with
+								large datasets knows that transformations can be frought with errors. Validation tools like pandera which integrate
+								well with Python allow the validation of data within the system that they are being modified in.
+							<br>
+								<br>
+								Just as YAML
+								schemas can be used to validate data structures, pandera provides a Python framework for you to define data structure.
+								You can easily design and import schemas into various transformational scripts and test the inputs and outputs according to your specifications.
+								Below you can find an example of the types of flexibility new tools like Pandera can offer.
+							<pre>
+								<code class="python">
+import pandera as pa
+from pandera import Column, DataFrameSchema
+
+# define input schema in pandera format (what the input should look like)
+in_schema = DataFrameSchema(
+	columns={
+		'trial_id': Column(str, nullable=False),  # trial name
+		'subject_id': Column(str, nullable=False),  # subject ID number
+		'event_date': Column(pa.DateTime, nullable=False),  # event date
+		}
+					)
+
+# define output schema in pandera format (what the output should look like)
+out_schema = DataFrameSchema(
+	columns={
+		'trial_id': Column(str, nullable=False),  # trial name
+		'subject_id': Column(str, nullable=False),  # subject ID number
+		'event_date': Column(pa.DateTime, nullable=False),  # event date
+		'favorite_color': Column(str, nullable=False),  # event date
+		}
+					)
+								</code>
+							</pre>
+							These schema objects can then be used as decorators around any function in Python. It will validate
+							the input and output data upon execution allowing for a detailed review of validation errors automatically.
+							<br>
+							<br>
+							These can be used to stop automated data processing pipeline and prevent poor data from slipping into your database.
+							This type of automation pipeline allows for the integration of many types of data without manual verification.
+							This is vital when collecting data at a high frequency, and one of the many reasons I chose to work with this framework.
+							<pre>
+								<code class="python">
+@pa.check_input(in_schema)
+def load_data(path):
+	return pandas.read_csv(path)
+
+@pa.check_output(out_schema)
+def processing_fn(df):
+    return df.assign(favorite_color="Crimson")
+								</code>
+							</pre>
+							For more examples of my work with data pipelines in Python, you can check the <a href="academic.html">"Academic"</a> section of this
+							site to see open-source examples of my code.
+							</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; James Sexton. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
