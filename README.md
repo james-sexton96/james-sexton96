@@ -1,15 +1,9 @@
 ### Hello there 👋
 
-I'm a neuroscientist by training but have a passion for computer science as a vehicle to solving challenging industry and research related questions.
+I am an academically trained neuroscientist, with a passion for solving industry problems with good research methods and data science expertise.
+I've got a meager collection of repositories here, including some work to standardize resting state fMRI pre-processing methods. 
 
-- 🔭 I’m currently working on diversify my language proficiencies but have a passion for data pipelines with Python
-  
-- 🌱 I’m currently learning more advance ML/deep learning techniques and C++ just for fun 
-  
-- 👯 I’m looking to collaborate on DSP with medical and consumer grade devices to improve our open source understanding of how they work
-
-- 💬 Ask me about fMRI and Python - I find the most challenging data the most exciting, and what's more challenging 
-  than understanding the brain!?
+Feel free to find me at my links below!
 
 #### LINKS
 [LinkedIn](https://www.linkedin.com/in/jamesdsexton/)    
