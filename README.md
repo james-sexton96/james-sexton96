@@ -1,6 +1,6 @@
 ### Hello there 👋
 
-I am an academically trained neuroscientist, with a passion for solving industry problems with reasoned analytics methods and data science expertise. 
+I am a data scientist with a background in computational neuroscience research, with a passion for solving industry problems with reasoned analytics methods and data science expertise. Fascinated by everything AI/ML 🤖 
 
 #### LINKS
 [LinkedIn](https://www.linkedin.com/in/jamesdsexton/)    
